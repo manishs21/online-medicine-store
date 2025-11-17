@@ -1,0 +1,250 @@
+/* Orders Page Styles */
+.orders-page {
+  background-color: var(--light-gray);
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+.orders-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.orders-container h1 {
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card-large {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.order-card-large:hover {
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.order-header-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--light-gray);
+  border-bottom: 2px solid var(--medium-gray);
+}
+
+.order-header-large h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+}
+
+.order-header-large p {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+  color: var(--dark-gray);
+}
+
+.order-status-badge .status {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.order-status-badge .status.confirmed {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: var(--success-color);
+}
+
+.order-status-badge .status.pending {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: var(--warning-color);
+}
+
+.order-body {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.order-items-section h4,
+.order-details-section h4 {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: var(--primary-blue);
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-details-section p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.order-footer-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--light-gray);
+}
+
+.order-summary {
+  text-align: right;
+}
+
+.order-summary p {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.order-summary p span {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.order-summary p.total {
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+  border-top: 1px solid var(--medium-gray);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.track-btn {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.track-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.no-orders {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.no-orders p {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+}
+
+.no-orders a {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .orders-page {
+    padding: 15px;
+  }
+
+  .order-header-large {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .order-footer-large {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .order-summary {
+    text-align: left;
+  }
+
+  .order-summary p {
+    justify-content: flex-start;
+  }
+
+  .track-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-container {
+    padding: 0;
+  }
+
+  .order-card-large {
+    border-radius: 0;
+  }
+
+  .order-header-large {
+    padding: 12px;
+  }
+
+  .order-header-large h3 {
+    font-size: 0.95rem;
+  }
+
+  .order-body {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .order-footer-large {
+    padding: 12px;
+  }
+
+  .order-summary p {
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .track-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

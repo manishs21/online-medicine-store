@@ -1,0 +1,129 @@
+/* Home Page Styles */
+.home-page {
+  background-color: var(--light-gray);
+  min-height: 100vh;
+}
+
+.home-page .hero-banner {
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Brands Section */
+.brands-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.brands-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.brand-card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+.brand-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.15);
+}
+
+/* Offers Section */
+.offers-section {
+  max-width: 1200px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.offer-card {
+  padding: 40px 20px;
+  border-radius: 12px;
+  color: var(--white);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.offer-card h3 {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.offer-1 {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+}
+
+.offer-2 {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+
+.offer-3 {
+  background: linear-gradient(135deg, #ffa502 0%, #ff7675 100%);
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .brand-card {
+    padding: 20px;
+  }
+
+  .offers-section {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 60px;
+  }
+
+  .offer-card {
+    padding: 30px 15px;
+  }
+
+  .offer-card h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offers-section {
+    grid-template-columns: 1fr;
+  }
+}
