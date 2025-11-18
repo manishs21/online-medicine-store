@@ -2,6 +2,8 @@
 
 A professional, responsive, and fully functional online medicine buying platform built with React, HTML5, CSS3, and JavaScript.
 
+![image alt](https://github.com/manishs21/online-medicine-store/blob/583b5537ecc3fba3a0a0cbda8a585343cad83709/Web%20pic1.png)
+
 ## 🎯 Features
 
 ### Core Features
